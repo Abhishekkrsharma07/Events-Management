@@ -21,4 +21,7 @@
     .catch(err => console.log(err));
 
     // Server
+    app.get('/health' , ()=>{
+        res.send({"message" : "health fine"})
+    })
     app.listen(5000, () => console.log("Server running on port 5000"));
